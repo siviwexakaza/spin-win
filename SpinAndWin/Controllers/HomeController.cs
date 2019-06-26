@@ -26,5 +26,13 @@ namespace SpinAndWin.Controllers
 
             return View();
         }
+        [HttpPost]
+        [Route("home/addpoints")]
+        public JsonResult AddPoints(int points)
+        {
+            // record points to the database
+
+            return Json(new { points }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
